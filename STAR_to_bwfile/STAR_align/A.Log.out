@@ -1,0 +1,201 @@
+STAR version=2.7.6a
+STAR compilation time,server,dir=Sat Sep 19 19:25:43 GMT 2020 :/Users/travis/build/alexdobin/travis-tests/STARcompile/source
+##### Command Line:
+STAR --runThreadN 4 --genomeDir STAR_hg38 --twopassMode Basic --outFileNamePrefix STAR_align/A. --outSAMtype BAM SortedByCoordinate --outSAMmapqUnique 255 --outFilterMultimapNmax 1 --readFilesIn fastq/A.fq.gz --outSJfilterReads Unique --readFilesCommand gunzip -c
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 STAR_align/A.
+###### All USER parameters from Command Line:
+runThreadN                    4     ~RE-DEFINED
+genomeDir                     STAR_hg38     ~RE-DEFINED
+twopassMode                   Basic     ~RE-DEFINED
+outFileNamePrefix             STAR_align/A.     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+outSAMmapqUnique              255     ~RE-DEFINED
+outFilterMultimapNmax         1     ~RE-DEFINED
+readFilesIn                   fastq/A.fq.gz        ~RE-DEFINED
+outSJfilterReads              Unique     ~RE-DEFINED
+readFilesCommand              gunzip   -c        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        4
+genomeDir                         STAR_hg38
+readFilesIn                       fastq/A.fq.gz   
+readFilesCommand                  gunzip   -c   
+outFileNamePrefix                 STAR_align/A.
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMmapqUnique                  255
+outSJfilterReads                  Unique
+outFilterMultimapNmax             1
+twopassMode                       Basic
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 4   --genomeDir STAR_hg38   --readFilesIn fastq/A.fq.gz      --readFilesCommand gunzip   -c      --outFileNamePrefix STAR_align/A.   --outSAMtype BAM   SortedByCoordinate      --outSAMmapqUnique 255   --outSJfilterReads Unique   --outFilterMultimapNmax 1   --twopassMode Basic
+----------------------------------------
+
+Number of fastq files for each mate = 1
+
+   Input read files for mate 1 :
+-rw-r--r--  1 dic  CHOP-EDU\Domain Users  2302692 Oct  2 15:06 fastq/A.fq.gz
+
+   readsCommandsFile:
+exec > "STAR_align/A._STARtmp/tmp.fifo.read1"
+echo FILE 0
+gunzip   -c      "fastq/A.fq.gz"
+
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+### STAR   --runMode genomeGenerate   --runThreadN 4   --genomeDir STAR_hg38   --genomeFastaFiles hg38.fa      --genomeSAindexNbases 11   --sjdbGTFfile hg38.refGene.gtf   --sjdbOverhang 100
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              hg38.fa        ~RE-DEFINED
+genomeSAindexNbases           11     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   hg38.refGene.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               51932090   331902264        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	chr22	50818468	0
+--sjdbOverhang = 100 taken from the generated genome
+Started loading the genome: Fri Oct  2 17:11:54 2020
+
+Genome: size given as a parameter = 51932090
+SA: size given as a parameter = 331902264
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=11  nSAi=5592404
+nGenome=51932090;  nSAbyte=331902264
+GstrandBit=32   SA number of indices=80461154
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 51932090 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 51932090 bytes
+SA file size: 331902264 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 331902264 bytes
+Loading SAindex ... done: 24466875 bytes
+Finished loading the genome: Fri Oct  2 17:11:54 2020
+
+Sum of all Genome bytes: 107217576
+Sum of all SA bytes: 33883024866
+Sum of all SAi bytes: 2339808219
+Processing splice junctions database sjdbN=5354,   pGe.sjdbOverhang=100 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+Created thread # 1
+Created thread # 2
+1:   fastq/A.fq.gz
+1:   fastq/A.fq.gz
+Created thread # 3
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #3
+Completed: thread #3
+Completed: thread #2
+Completed: thread #3
+Completed: thread #2
+Completed: thread #0
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Oct 02 17:12:49   Loaded database junctions from the generated genome STAR_hg38//sjdbList.out.tab: 5354 total junctions
+
+Oct 02 17:12:49   Loaded database junctions from the 1st pass file: STAR_align/A._STARpass1//SJ.out.tab: 5354 total junctions
+
+Oct 02 17:12:49   Finished preparing junctions
+Oct 02 17:12:49 ..... inserting junctions into the genome indices
+Oct 02 17:12:49   Finished SA search: number of new junctions=0, old junctions=5354
+Oct 02 17:12:49   Finished sorting SA indicesL nInd=0
+Genome size with junctions=51932090  50855936   1076154
+GstrandBit1=32   GstrandBit=32
+Oct 02 17:12:50   Finished inserting junction indices
+Oct 02 17:12:50   Finished SAi
+Oct 02 17:12:50 ..... finished inserting junctions into genome
+
+   Input read files for mate 1 :
+-rw-r--r--  1 dic  CHOP-EDU\Domain Users  2302692 Oct  2 15:06 fastq/A.fq.gz
+
+   readsCommandsFile:
+exec > "STAR_align/A._STARtmp/tmp.fifo.read1"
+echo FILE 0
+gunzip   -c      "fastq/A.fq.gz"
+
+Created thread # 1
+Created thread # 1
+Starting to map file # 0
+mate 1:   fastq/A.fq.gz
+Created thread # 2
+Created thread # 3
+Thread #1 end of input stream, nextChar=-1
+Completed: thread #2
+Completed: thread #2
+Completed: thread #0
+Completed: thread #3
+Completed: thread #2
+Completed: thread #0
+BAM sorting: 17 mapped reads
+BAM sorting bins genomic start loci:
+1	0	11251574
+2	0	11251574
+3	0	11251574
+4	0	11251574
+5	0	11251574
+6	0	11251574
+7	0	11251574
+8	0	11251574
+9	0	11251574
+10	0	11251574
+11	0	11251574
+12	0	11251574
+13	0	11251574
+14	0	11251574
+15	0	11251574
+16	0	11251574
+17	0	11251574
+18	0	11251574
+19	0	11251574
+20	0	11251574
+21	0	11251574
+22	0	11251574
+23	0	11251574
+24	0	11251574
+25	0	11251574
+26	0	11251574
+27	0	11251574
+28	0	11251574
+29	0	11251574
+30	0	11251574
+31	0	11251574
+32	0	11251574
+33	0	11251574
+34	0	11251574
+35	0	11251574
+36	0	11251574
+37	0	11251574
+38	0	11251574
+39	0	11251574
+40	0	11251574
+41	0	11251574
+42	0	11251574
+43	0	11251574
+44	0	11251574
+45	0	11251574
+46	0	11251574
+47	0	11251574
+48	0	11251574
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Oct 02 17:13:45 ..... started sorting BAM
+Max memory needed for sorting = 4426
+ALL DONE!
