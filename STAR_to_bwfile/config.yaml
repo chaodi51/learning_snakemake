@@ -1,0 +1,4 @@
+samples:
+    A: fastq/A.fq.gz
+    B: fastq/B.fq.gz
+    C: fastq/C.fq.gz
